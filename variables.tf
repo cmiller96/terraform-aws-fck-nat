@@ -158,3 +158,18 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "region" {
+  description = "Region to deploy the NAT instance into"
+  type        = string
+}
+
+variable "account_id" {
+  description = "Account ID to deploy the NAT instance into"
+  type        = string
+}
+
+variable "role" {
+  description = "Account ID to deploy the NAT instance into"
+  type        = string
+}
