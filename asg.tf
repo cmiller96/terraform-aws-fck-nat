@@ -33,6 +33,12 @@ resource "aws_autoscaling_group" "main" {
     }
   }
 
+  tag {
+    key                 = "Environment"
+    value               = terraform.workspace
+    propagate_at_launch = true
+  }
+
   enabled_metrics = [
     "GroupMinSize",
     "GroupMaxSize",
