@@ -13,7 +13,7 @@ provider "aws" {
 
   assume_role {
     session_name = "session"
-    role_arn     = "arn:aws:iam::${var.account_id[terraform.workspace]}:role/${var.role}"
+    role_arn     = "arn:aws:iam::${var.account_id}:role/${var.role}"
   }
 
   default_tags {
